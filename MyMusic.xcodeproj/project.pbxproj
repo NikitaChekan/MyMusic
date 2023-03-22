@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		DA065A3829CB719F00005833 /* SDWebImage in Frameworks */ = {isa = PBXBuildFile; productRef = DA065A3729CB719F00005833 /* SDWebImage */; };
+		DA065A3B29CB775000005833 /* FooterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA065A3A29CB775000005833 /* FooterView.swift */; };
 		DA50D81A29C8E61D00A4C6DE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA50D81929C8E61D00A4C6DE /* AppDelegate.swift */; };
 		DA50D81C29C8E61D00A4C6DE /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA50D81B29C8E61D00A4C6DE /* SceneDelegate.swift */; };
 		DA50D81E29C8E61D00A4C6DE /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA50D81D29C8E61D00A4C6DE /* ViewController.swift */; };
@@ -32,6 +33,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		DA065A3A29CB775000005833 /* FooterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FooterView.swift; sourceTree = "<group>"; };
 		DA50D81629C8E61D00A4C6DE /* MyMusic.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyMusic.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DA50D81929C8E61D00A4C6DE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DA50D81B29C8E61D00A4C6DE /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -77,6 +79,14 @@
 			path = Models;
 			sourceTree = "<group>";
 		};
+		DA065A3929CB773900005833 /* FooterView */ = {
+			isa = PBXGroup;
+			children = (
+				DA065A3A29CB775000005833 /* FooterView.swift */,
+			);
+			path = FooterView;
+			sourceTree = "<group>";
+		};
 		DA50D80D29C8E61D00A4C6DE = {
 			isa = PBXGroup;
 			children = (
@@ -115,6 +125,7 @@
 		DAFA9D1229CB174C00324245 /* Search */ = {
 			isa = PBXGroup;
 			children = (
+				DA065A3929CB773900005833 /* FooterView */,
 				DAFA9D4429CB345800324245 /* Cell */,
 				DAFA9D3E29CB21D400324245 /* SearchViewController.storyboard */,
 				DAFA9D3429CB18C400324245 /* SearchViewController.swift */,
@@ -239,6 +250,7 @@
 				DA50D81E29C8E61D00A4C6DE /* ViewController.swift in Sources */,
 				DAFA9D0F29CB053300324245 /* SearchResponse.swift in Sources */,
 				DAFA9D3C29CB18C400324245 /* SearchInteractor.swift in Sources */,
+				DA065A3B29CB775000005833 /* FooterView.swift in Sources */,
 				DAFA9D4829CB34BC00324245 /* TrackCell.swift in Sources */,
 				DA50D81A29C8E61D00A4C6DE /* AppDelegate.swift in Sources */,
 				DA50D82E29C8E69700A4C6DE /* MainTabBarController.swift in Sources */,
