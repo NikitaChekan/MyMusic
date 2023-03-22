@@ -26,6 +26,8 @@
 		DAFA9D3C29CB18C400324245 /* SearchInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAFA9D3529CB18C400324245 /* SearchInteractor.swift */; };
 		DAFA9D3F29CB21D400324245 /* SearchViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DAFA9D3E29CB21D400324245 /* SearchViewController.storyboard */; };
 		DAFA9D4129CB253D00324245 /* UIViewController + Storyboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAFA9D4029CB253D00324245 /* UIViewController + Storyboard.swift */; };
+		DAFA9D4629CB348D00324245 /* TrackCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DAFA9D4529CB348D00324245 /* TrackCell.xib */; };
+		DAFA9D4829CB34BC00324245 /* TrackCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAFA9D4729CB34BC00324245 /* TrackCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -49,6 +51,8 @@
 		DAFA9D3529CB18C400324245 /* SearchInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchInteractor.swift; sourceTree = "<group>"; };
 		DAFA9D3E29CB21D400324245 /* SearchViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SearchViewController.storyboard; sourceTree = "<group>"; };
 		DAFA9D4029CB253D00324245 /* UIViewController + Storyboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController + Storyboard.swift"; sourceTree = "<group>"; };
+		DAFA9D4529CB348D00324245 /* TrackCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TrackCell.xib; sourceTree = "<group>"; };
+		DAFA9D4729CB34BC00324245 /* TrackCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +67,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		DA065A3529CB6A2200005833 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				DAFA9D0E29CB053300324245 /* SearchResponse.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 		DA50D80D29C8E61D00A4C6DE = {
 			isa = PBXGroup;
 			children = (
@@ -89,7 +101,6 @@
 				DAFA9D1229CB174C00324245 /* Search */,
 				DA50D82F29C8E93700A4C6DE /* SearchMusicViewController.swift */,
 				DA50D81D29C8E61D00A4C6DE /* ViewController.swift */,
-				DAFA9D0E29CB053300324245 /* SearchResponse.swift */,
 				DAFA9D4229CB254700324245 /* Helpers */,
 				DA50D81F29C8E61D00A4C6DE /* Main.storyboard */,
 				DA50D82229C8E61F00A4C6DE /* Assets.xcassets */,
@@ -102,6 +113,7 @@
 		DAFA9D1229CB174C00324245 /* Search */ = {
 			isa = PBXGroup;
 			children = (
+				DAFA9D4429CB345800324245 /* Cell */,
 				DAFA9D3E29CB21D400324245 /* SearchViewController.storyboard */,
 				DAFA9D3429CB18C400324245 /* SearchViewController.swift */,
 				DAFA9D3529CB18C400324245 /* SearchInteractor.swift */,
@@ -116,6 +128,7 @@
 		DAFA9D2129CB182800324245 /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				DA065A3529CB6A2200005833 /* Models */,
 				DAFA9D1029CB11BA00324245 /* NetworkService.swift */,
 			);
 			path = Services;
@@ -127,6 +140,15 @@
 				DAFA9D4029CB253D00324245 /* UIViewController + Storyboard.swift */,
 			);
 			path = Helpers;
+			sourceTree = "<group>";
+		};
+		DAFA9D4429CB345800324245 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				DAFA9D4529CB348D00324245 /* TrackCell.xib */,
+				DAFA9D4729CB34BC00324245 /* TrackCell.swift */,
+			);
+			path = Cell;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -194,6 +216,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				DA50D82629C8E61F00A4C6DE /* LaunchScreen.storyboard in Resources */,
+				DAFA9D4629CB348D00324245 /* TrackCell.xib in Resources */,
 				DA50D82329C8E61F00A4C6DE /* Assets.xcassets in Resources */,
 				DAFA9D3F29CB21D400324245 /* SearchViewController.storyboard in Resources */,
 				DA50D82129C8E61D00A4C6DE /* Main.storyboard in Resources */,
@@ -212,6 +235,7 @@
 				DA50D81E29C8E61D00A4C6DE /* ViewController.swift in Sources */,
 				DAFA9D0F29CB053300324245 /* SearchResponse.swift in Sources */,
 				DAFA9D3C29CB18C400324245 /* SearchInteractor.swift in Sources */,
+				DAFA9D4829CB34BC00324245 /* TrackCell.swift in Sources */,
 				DA50D81A29C8E61D00A4C6DE /* AppDelegate.swift in Sources */,
 				DA50D82E29C8E69700A4C6DE /* MainTabBarController.swift in Sources */,
 				DAFA9D3829CB18C400324245 /* SearchWorker.swift in Sources */,
