@@ -24,7 +24,8 @@
 		DAFA9D3A29CB18C400324245 /* SearchModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAFA9D3329CB18C400324245 /* SearchModels.swift */; };
 		DAFA9D3B29CB18C400324245 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAFA9D3429CB18C400324245 /* SearchViewController.swift */; };
 		DAFA9D3C29CB18C400324245 /* SearchInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAFA9D3529CB18C400324245 /* SearchInteractor.swift */; };
-		DAFA9D3D29CB18C400324245 /* SearchViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DAFA9D3629CB18C400324245 /* SearchViewController.xib */; };
+		DAFA9D3F29CB21D400324245 /* SearchViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DAFA9D3E29CB21D400324245 /* SearchViewController.storyboard */; };
+		DAFA9D4129CB253D00324245 /* UIViewController + Storyboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAFA9D4029CB253D00324245 /* UIViewController + Storyboard.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -46,7 +47,8 @@
 		DAFA9D3329CB18C400324245 /* SearchModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchModels.swift; sourceTree = "<group>"; };
 		DAFA9D3429CB18C400324245 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		DAFA9D3529CB18C400324245 /* SearchInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchInteractor.swift; sourceTree = "<group>"; };
-		DAFA9D3629CB18C400324245 /* SearchViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SearchViewController.xib; sourceTree = "<group>"; };
+		DAFA9D3E29CB21D400324245 /* SearchViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SearchViewController.storyboard; sourceTree = "<group>"; };
+		DAFA9D4029CB253D00324245 /* UIViewController + Storyboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController + Storyboard.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -88,6 +90,7 @@
 				DA50D82F29C8E93700A4C6DE /* SearchMusicViewController.swift */,
 				DA50D81D29C8E61D00A4C6DE /* ViewController.swift */,
 				DAFA9D0E29CB053300324245 /* SearchResponse.swift */,
+				DAFA9D4229CB254700324245 /* Helpers */,
 				DA50D81F29C8E61D00A4C6DE /* Main.storyboard */,
 				DA50D82229C8E61F00A4C6DE /* Assets.xcassets */,
 				DA50D82429C8E61F00A4C6DE /* LaunchScreen.storyboard */,
@@ -99,7 +102,7 @@
 		DAFA9D1229CB174C00324245 /* Search */ = {
 			isa = PBXGroup;
 			children = (
-				DAFA9D3629CB18C400324245 /* SearchViewController.xib */,
+				DAFA9D3E29CB21D400324245 /* SearchViewController.storyboard */,
 				DAFA9D3429CB18C400324245 /* SearchViewController.swift */,
 				DAFA9D3529CB18C400324245 /* SearchInteractor.swift */,
 				DAFA9D3029CB18C400324245 /* SearchPresenter.swift */,
@@ -116,6 +119,14 @@
 				DAFA9D1029CB11BA00324245 /* NetworkService.swift */,
 			);
 			path = Services;
+			sourceTree = "<group>";
+		};
+		DAFA9D4229CB254700324245 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				DAFA9D4029CB253D00324245 /* UIViewController + Storyboard.swift */,
+			);
+			path = Helpers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -184,7 +195,7 @@
 			files = (
 				DA50D82629C8E61F00A4C6DE /* LaunchScreen.storyboard in Resources */,
 				DA50D82329C8E61F00A4C6DE /* Assets.xcassets in Resources */,
-				DAFA9D3D29CB18C400324245 /* SearchViewController.xib in Resources */,
+				DAFA9D3F29CB21D400324245 /* SearchViewController.storyboard in Resources */,
 				DA50D82129C8E61D00A4C6DE /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -197,6 +208,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				DA50D83029C8E93700A4C6DE /* SearchMusicViewController.swift in Sources */,
+				DAFA9D4129CB253D00324245 /* UIViewController + Storyboard.swift in Sources */,
 				DA50D81E29C8E61D00A4C6DE /* ViewController.swift in Sources */,
 				DAFA9D0F29CB053300324245 /* SearchResponse.swift in Sources */,
 				DAFA9D3C29CB18C400324245 /* SearchInteractor.swift in Sources */,
