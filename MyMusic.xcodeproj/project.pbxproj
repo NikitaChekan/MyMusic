@@ -16,6 +16,7 @@
 		DA50D82E29C8E69700A4C6DE /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA50D82D29C8E69700A4C6DE /* MainTabBarController.swift */; };
 		DA50D83029C8E93700A4C6DE /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA50D82F29C8E93700A4C6DE /* SearchViewController.swift */; };
 		DAFA9D0D29CB007A00324245 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = DAFA9D0C29CB007A00324245 /* Alamofire */; };
+		DAFA9D0F29CB053300324245 /* SearchResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAFA9D0E29CB053300324245 /* SearchResponse.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +30,7 @@
 		DA50D82729C8E61F00A4C6DE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DA50D82D29C8E69700A4C6DE /* MainTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
 		DA50D82F29C8E93700A4C6DE /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
+		DAFA9D0E29CB053300324245 /* SearchResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResponse.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,6 +69,7 @@
 				DA50D81D29C8E61D00A4C6DE /* ViewController.swift */,
 				DA50D82D29C8E69700A4C6DE /* MainTabBarController.swift */,
 				DA50D82F29C8E93700A4C6DE /* SearchViewController.swift */,
+				DAFA9D0E29CB053300324245 /* SearchResponse.swift */,
 				DA50D81F29C8E61D00A4C6DE /* Main.storyboard */,
 				DA50D82229C8E61F00A4C6DE /* Assets.xcassets */,
 				DA50D82429C8E61F00A4C6DE /* LaunchScreen.storyboard */,
@@ -154,6 +157,7 @@
 			files = (
 				DA50D83029C8E93700A4C6DE /* SearchViewController.swift in Sources */,
 				DA50D81E29C8E61D00A4C6DE /* ViewController.swift in Sources */,
+				DAFA9D0F29CB053300324245 /* SearchResponse.swift in Sources */,
 				DA50D81A29C8E61D00A4C6DE /* AppDelegate.swift in Sources */,
 				DA50D82E29C8E69700A4C6DE /* MainTabBarController.swift in Sources */,
 				DA50D81C29C8E61D00A4C6DE /* SceneDelegate.swift in Sources */,
