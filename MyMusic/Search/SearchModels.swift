@@ -41,6 +41,5 @@ struct SearchViewModel {
         var artistName: String
         var previewUrl: String?
     }
-    
     let cells: [Cell]
 }
