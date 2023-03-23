@@ -17,6 +17,8 @@
 		DA50D82629C8E61F00A4C6DE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DA50D82429C8E61F00A4C6DE /* LaunchScreen.storyboard */; };
 		DA50D82E29C8E69700A4C6DE /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA50D82D29C8E69700A4C6DE /* MainTabBarController.swift */; };
 		DA50D83029C8E93700A4C6DE /* SearchMusicViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA50D82F29C8E93700A4C6DE /* SearchMusicViewController.swift */; };
+		DACB1CD429CC4D950035E3AB /* TrackDetailView.xib in Resources */ = {isa = PBXBuildFile; fileRef = DACB1CD329CC4D950035E3AB /* TrackDetailView.xib */; };
+		DACB1CD629CC4DA00035E3AB /* TrackDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DACB1CD529CC4DA00035E3AB /* TrackDetailView.swift */; };
 		DAFA9D0D29CB007A00324245 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = DAFA9D0C29CB007A00324245 /* Alamofire */; };
 		DAFA9D0F29CB053300324245 /* SearchResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAFA9D0E29CB053300324245 /* SearchResponse.swift */; };
 		DAFA9D1129CB11BA00324245 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAFA9D1029CB11BA00324245 /* NetworkService.swift */; };
@@ -44,6 +46,8 @@
 		DA50D82729C8E61F00A4C6DE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DA50D82D29C8E69700A4C6DE /* MainTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
 		DA50D82F29C8E93700A4C6DE /* SearchMusicViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchMusicViewController.swift; sourceTree = "<group>"; };
+		DACB1CD329CC4D950035E3AB /* TrackDetailView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TrackDetailView.xib; sourceTree = "<group>"; };
+		DACB1CD529CC4DA00035E3AB /* TrackDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackDetailView.swift; sourceTree = "<group>"; };
 		DAFA9D0E29CB053300324245 /* SearchResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResponse.swift; sourceTree = "<group>"; };
 		DAFA9D1029CB11BA00324245 /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
 		DAFA9D3029CB18C400324245 /* SearchPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchPresenter.swift; sourceTree = "<group>"; };
@@ -122,9 +126,19 @@
 			path = MyMusic;
 			sourceTree = "<group>";
 		};
+		DACB1CD229CC4D710035E3AB /* TrackDetailView */ = {
+			isa = PBXGroup;
+			children = (
+				DACB1CD329CC4D950035E3AB /* TrackDetailView.xib */,
+				DACB1CD529CC4DA00035E3AB /* TrackDetailView.swift */,
+			);
+			path = TrackDetailView;
+			sourceTree = "<group>";
+		};
 		DAFA9D1229CB174C00324245 /* Search */ = {
 			isa = PBXGroup;
 			children = (
+				DACB1CD229CC4D710035E3AB /* TrackDetailView */,
 				DA065A3929CB773900005833 /* FooterView */,
 				DAFA9D4429CB345800324245 /* Cell */,
 				DAFA9D3E29CB21D400324245 /* SearchViewController.storyboard */,
@@ -231,6 +245,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				DA50D82629C8E61F00A4C6DE /* LaunchScreen.storyboard in Resources */,
+				DACB1CD429CC4D950035E3AB /* TrackDetailView.xib in Resources */,
 				DAFA9D4629CB348D00324245 /* TrackCell.xib in Resources */,
 				DA50D82329C8E61F00A4C6DE /* Assets.xcassets in Resources */,
 				DAFA9D3F29CB21D400324245 /* SearchViewController.storyboard in Resources */,
@@ -260,6 +275,7 @@
 				DAFA9D3A29CB18C400324245 /* SearchModels.swift in Sources */,
 				DA50D81C29C8E61D00A4C6DE /* SceneDelegate.swift in Sources */,
 				DAFA9D3729CB18C400324245 /* SearchPresenter.swift in Sources */,
+				DACB1CD629CC4DA00035E3AB /* TrackDetailView.swift in Sources */,
 				DAFA9D1129CB11BA00324245 /* NetworkService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
