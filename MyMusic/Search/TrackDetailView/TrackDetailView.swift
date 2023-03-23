@@ -18,29 +18,35 @@ class TrackDetailView: UIView {
     @IBOutlet var playPauseButton: UIButton!
     @IBOutlet var volumeSlider: UISlider!
     
-    override class func awakeFromNib() {
+    override func awakeFromNib() {
         super.awakeFromNib()
         
-//        trackImageView.backgroundColor = .red
+        trackImageView.backgroundColor = .red
     }
     
     @IBAction func handleCurrentTimeSlider(_ sender: Any) {
+        
     }
     
     @IBAction func handleVolumeSlider(_ sender: Any) {
+        
     }
     
     @IBAction func dragDownButtonTapped(_ sender: Any) {
         self.removeFromSuperview()
+        
     }
     
     @IBAction func previousTrack(_ sender: Any) {
+        
     }
     
     @IBAction func nextTrack(_ sender: Any) {
+        
     }
     
     @IBAction func playPauseAction(_ sender: Any) {
+        
     }
     
 }
