@@ -52,6 +52,7 @@ class SearchViewController: UIViewController, SearchDisplayLogic {
         
         setupSearchBar()
         setupTableView()
+        searchBar(searchController.searchBar, textDidChange: "morgenshtern") /// По умолчанию сразу плеер открывается
     }
     
     private func setupSearchBar() {
@@ -110,6 +111,7 @@ extension SearchViewController: UITableViewDelegate, UITableViewDataSource {
         .first?.windows
         .filter({$0.isKeyWindow}).first
         let trackDetailsView = Bundle.main.loadNibNamed("TrackDetailView", owner: self, options: nil)?.first as! TrackDetailView
+        trackDetailsView.set(viewModel: cellViewModel)
         window?.addSubview(trackDetailsView)
 
     }
