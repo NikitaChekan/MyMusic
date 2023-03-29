@@ -49,6 +49,7 @@ class TrackDetailView: UIView {
         
         playTrack(previewUrl: viewModel.previewUrl)
         monitorStartTime()
+        observePlayerCurrentTime()
     }
     
     private func playTrack(previewUrl: String?) {
@@ -69,6 +70,16 @@ class TrackDetailView: UIView {
         }
     }
     
+    private func observePlayerCurrentTime() {
+        let interval = CMTimeMake(value: 1, timescale: 2)
+        player.addPeriodicTimeObserver(forInterval: interval, queue: .main) { [weak self] (time) in
+            self?.currentTimeLabel.text = time.toDisplayString()
+            
+            let durationTime = self?.player.currentItem?.duration
+            let currentDurationTime = ((durationTime ?? CMTimeMake(value: 1, timescale: 1)) - time).toDisplayString()
+            self?.durationLabel.text = "-\(currentDurationTime)"
+        }
+    }
 //    deinit {
 //        print("TrackDetailView memory being reclaimed")
 //    }
