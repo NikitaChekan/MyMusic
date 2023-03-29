@@ -9,6 +9,11 @@ import UIKit
 import SDWebImage
 import AVKit
 
+protocol TrackMovingDelegate: AnyObject {
+    func moveBackForPreviousTrack() -> SearchViewModel.Cell?
+    func moveForwardForPreviousTrack() -> SearchViewModel.Cell?
+}
+
 class TrackDetailView: UIView {
     
     // MARK: - @@IBOutlets
@@ -27,10 +32,12 @@ class TrackDetailView: UIView {
         return avPlayer
     }()
     
+    weak var delegate: TrackMovingDelegate?
+    
     // MARK: - awakeFromNib
     override func awakeFromNib() {
         super.awakeFromNib()
-         
+        
         let scale: CGFloat = 0.8
         trackImageView.transform = CGAffineTransform(scaleX: scale, y: scale)
         trackImageView.layer.cornerRadius = 5
@@ -62,7 +69,6 @@ class TrackDetailView: UIView {
     
     // MARK: - Time Setup
     private func monitorStartTime() {
-        
         let time = CMTimeMake(value: 1, timescale: 3)
         let times = [NSValue(time: time)]
         player.addBoundaryTimeObserver(forTimes: times, queue: .main) { [weak self] in
@@ -91,9 +97,9 @@ class TrackDetailView: UIView {
         self.currentTimeSlider.value = Float(percentage)
     }
     
-//    deinit {
-//        print("TrackDetailView memory being reclaimed")
-//    }
+    //    deinit {
+    //        print("TrackDetailView memory being reclaimed")
+    //    }
     
     // MARK: - Animations
     private func enlargeTrackImageView() {
@@ -117,7 +123,7 @@ class TrackDetailView: UIView {
         let seekTimeInSeconds = Float64(percentage) * durationInSeconds
         let seekTime = CMTimeMakeWithSeconds(seekTimeInSeconds, preferredTimescale: 1)
         player.seek(to: seekTime)
-
+        
     }
     
     @IBAction func handleVolumeSlider(_ sender: Any) {
@@ -130,11 +136,15 @@ class TrackDetailView: UIView {
     }
     
     @IBAction func previousTrack(_ sender: Any) {
-        
+        let cellViewModel = delegate?.moveBackForPreviousTrack()
+        guard let cellInfo = cellViewModel else { return }
+        self.set(viewModel: cellInfo)
     }
     
     @IBAction func nextTrack(_ sender: Any) {
-        
+        let cellViewModel = delegate?.moveForwardForPreviousTrack()
+        guard let cellInfo = cellViewModel else { return }
+        self.set(viewModel: cellInfo)
     }
     
     @IBAction func playPauseAction(_ sender: Any) {
