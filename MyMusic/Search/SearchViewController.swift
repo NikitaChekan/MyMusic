@@ -110,7 +110,7 @@ extension SearchViewController: UITableViewDelegate, UITableViewDataSource {
         .compactMap({$0})
         .first?.windows
         .filter({$0.isKeyWindow}).first
-        let trackDetailsView = Bundle.main.loadNibNamed("TrackDetailView", owner: self, options: nil)?.first as! TrackDetailView
+        let trackDetailsView: TrackDetailView = TrackDetailView.loadFromNib()
         trackDetailsView.set(viewModel: cellViewModel)
         trackDetailsView.delegate = self
         window?.addSubview(trackDetailsView)
@@ -175,12 +175,10 @@ extension SearchViewController: TrackMovingDelegate {
     }
     
     func moveBackForPreviousTrack() -> SearchViewModel.Cell? {
-        print("Go back")
         return getTrack(isForwardTrack: false)
     }
     
     func moveForwardForPreviousTrack() -> SearchViewModel.Cell? {
-        print("Go forward")
         return getTrack(isForwardTrack: true)
     }
 }

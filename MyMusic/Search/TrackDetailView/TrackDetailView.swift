@@ -33,6 +33,7 @@ class TrackDetailView: UIView {
     }()
     
     weak var delegate: TrackMovingDelegate?
+    weak var tabBarDelegate: MainTabBarControllerDelegate?
     
     // MARK: - awakeFromNib
     override func awakeFromNib() {
@@ -97,10 +98,6 @@ class TrackDetailView: UIView {
         self.currentTimeSlider.value = Float(percentage)
     }
     
-    //    deinit {
-    //        print("TrackDetailView memory being reclaimed")
-    //    }
-    
     // MARK: - Animations
     private func enlargeTrackImageView() {
         UIView.animate(withDuration: 1, delay: 0, usingSpringWithDamping: 0.5, initialSpringVelocity: 1, options: .curveEaseOut) {
@@ -131,8 +128,10 @@ class TrackDetailView: UIView {
     }
     
     @IBAction func dragDownButtonTapped(_ sender: Any) {
-        self.removeFromSuperview()
         
+        self.tabBarDelegate?.minimizeTrackDetailController()
+        
+//        self.removeFromSuperview()
     }
     
     @IBAction func previousTrack(_ sender: Any) {
