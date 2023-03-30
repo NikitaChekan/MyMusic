@@ -58,6 +58,8 @@ class TrackDetailView: UIView {
         playTrack(previewUrl: viewModel.previewUrl)
         monitorStartTime()
         observePlayerCurrentTime()
+        
+        playPauseButton.setImage(UIImage(named: "pause"), for: .normal)
     }
     
     private func playTrack(previewUrl: String?) {
