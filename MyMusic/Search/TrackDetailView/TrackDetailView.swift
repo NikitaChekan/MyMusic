@@ -50,6 +50,10 @@ class TrackDetailView: UIView {
         let scale: CGFloat = 0.8
         trackImageView.transform = CGAffineTransform(scaleX: scale, y: scale)
         trackImageView.layer.cornerRadius = 5
+        
+        miniPlayPauseButton.imageEdgeInsets = .init(top: 11, left: 11, bottom: 11, right: 11)
+        
+        setupGestures()
     }
     
     // MARK: - Setup
@@ -71,6 +75,14 @@ class TrackDetailView: UIView {
         
         playPauseButton.setImage(UIImage(named: "pause"), for: .normal)
         miniPlayPauseButton.setImage(UIImage(named: "pause"), for: .normal)
+    }
+    
+    private func setupGestures() {
+        addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(handleTapMaximized)))
+    }
+    
+    @objc private func handleTapMaximized() {
+        self.tabBarDelegate?.maximizeTrackDetailController(viewModel: nil)
     }
     
     private func playTrack(previewUrl: String?) {

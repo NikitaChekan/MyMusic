@@ -40,7 +40,7 @@
                                     <nil key="textColor"/>
                                     <nil key="highlightedColor"/>
                                 </label>
-                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QSy-b5-p5u">
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QSy-b5-p5u">
                                     <rect key="frame" x="269" y="0.0" width="44" height="48"/>
                                     <constraints>
                                         <constraint firstAttribute="width" constant="44" id="RyC-MR-vEb"/>
@@ -52,7 +52,7 @@
                                         <action selector="playPauseAction:" destination="EDj-eJ-3a9" eventType="touchUpInside" id="lgg-a5-Z9p"/>
                                     </connections>
                                 </button>
-                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LRy-MV-we9">
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LRy-MV-we9">
                                     <rect key="frame" x="329" y="0.0" width="48" height="48"/>
                                     <constraints>
                                         <constraint firstAttribute="width" constant="48" id="z3t-L0-6aD"/>
@@ -233,6 +233,32 @@
                 <outlet property="volumeSlider" destination="bo9-nO-FdB" id="TyV-SG-Mi4"/>
             </connections>
             <point key="canvasLocation" x="-277" y="-146"/>
+        </view>
+        <view contentMode="scaleToFill" id="Iec-V0-C3Z">
+            <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eSf-Sb-rI9">
+                    <rect key="frame" x="183.66666666666666" y="411" width="26" height="30"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="26" id="7B7-AV-hE6"/>
+                        <constraint firstAttribute="height" constant="30" id="KZl-av-JBb"/>
+                    </constraints>
+                    <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                    <state key="normal" image="pause"/>
+                    <connections>
+                        <action selector="playPauseAction:" destination="EDj-eJ-3a9" eventType="touchUpInside" id="Sv5-vx-3Sb"/>
+                    </connections>
+                </button>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="WCP-o3-4yJ"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="eSf-Sb-rI9" firstAttribute="centerY" secondItem="Iec-V0-C3Z" secondAttribute="centerY" id="28a-Gx-LdE"/>
+                <constraint firstItem="eSf-Sb-rI9" firstAttribute="centerX" secondItem="Iec-V0-C3Z" secondAttribute="centerX" id="UXb-n3-qPP"/>
+            </constraints>
+            <point key="canvasLocation" x="442" y="-164"/>
         </view>
     </objects>
     <resources>
