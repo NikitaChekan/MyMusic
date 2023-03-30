@@ -9,9 +9,7 @@ import UIKit
 
 protocol MainTabBarControllerDelegate: AnyObject {
     func minimizeTrackDetailController()
-    func maximizeTrackDetailController(viewModel: SearchViewModel.Cell?)
-
-    
+    func maximizeTrackDetailController(viewModel: SearchViewModel.Cell?)    
 }
 
 class MainTabBarController: UITabBarController {
@@ -100,6 +98,8 @@ extension MainTabBarController: MainTabBarControllerDelegate {
             options: .curveEaseOut) {
                 self.view.layoutIfNeeded()
                 self.tabBar.alpha = 0
+                self.trackDetailView.miniTrackView.alpha = 0
+                self.trackDetailView.maximizedStackView.alpha = 1
             }
         
         guard let viewModel = viewModel else { return }
@@ -120,6 +120,8 @@ extension MainTabBarController: MainTabBarControllerDelegate {
             options: .curveEaseOut) {
                 self.view.layoutIfNeeded()
                 self.tabBar.alpha = 1
+                self.trackDetailView.miniTrackView.alpha = 1
+                self.trackDetailView.maximizedStackView.alpha = 0
             }
     }
     
