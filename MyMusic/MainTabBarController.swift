@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import SwiftUI
 
 protocol MainTabBarControllerDelegate: AnyObject {
     func minimizeTrackDetailController()
@@ -28,16 +29,17 @@ class MainTabBarController: UITabBarController {
         view.backgroundColor = .white
         tabBar.tintColor = #colorLiteral(red: 1, green: 0, blue: 0.3776089847, alpha: 1)
         
+        let library = Library()
+        let hostVC = UIHostingController(rootView: library)
+        hostVC.tabBarItem.image = UIImage(imageLiteralResourceName: "library")
+        hostVC.tabBarItem.title = "Library"
+        
         viewControllers = [
+            hostVC,
             generateViewController(
                 rootViewController: searchVC,
                 image: UIImage(imageLiteralResourceName: "search"),
                 title: "Search"
-            ),
-            generateViewController(
-                rootViewController: ViewController(),
-                image: UIImage(imageLiteralResourceName: "library"),
-                title: "Library"
             )
         ]
         
