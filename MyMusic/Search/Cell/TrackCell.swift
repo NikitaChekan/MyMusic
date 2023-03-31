@@ -25,6 +25,8 @@ class TrackCell: UITableViewCell {
     
     static let reuseId = "TrackCell"
     
+    var cell: SearchViewModel.Cell?
+    
     override class func awakeFromNib() {
         super.awakeFromNib()
     }
@@ -35,7 +37,17 @@ class TrackCell: UITableViewCell {
         trackImageView.image = nil
     }
     
-    func set(viewModel: TrackCellViewModel) {
+    @IBAction func addTrackAction(_ sender: Any) {
+        let defaults = UserDefaults.standard
+        
+        if let savedData = try? NSKeyedArchiver.archivedData(withRootObject: cell, requiringSecureCoding: false) {
+            defaults.set(savedData, forKey: "tracks")
+        }
+    }
+    
+    func set(viewModel: SearchViewModel.Cell) {
+        self.cell = viewModel
+        
         trackNameLabel.text = viewModel.trackName
         artistNameLabel.text = viewModel.artistName
         collectionNameLabel.text = viewModel.collectionName
