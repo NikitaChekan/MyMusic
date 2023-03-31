@@ -51,7 +51,12 @@ class TrackDetailView: UIView {
         trackImageView.transform = CGAffineTransform(scaleX: scale, y: scale)
         trackImageView.layer.cornerRadius = 5
         
-        miniPlayPauseButton.imageEdgeInsets = .init(top: 11, left: 11, bottom: 11, right: 11)
+        miniPlayPauseButton.imageEdgeInsets = .init(
+            top: 11,
+            left: 11,
+            bottom: 11,
+            right: 11
+        )
         
         setupGestures()
     }
@@ -98,12 +103,12 @@ class TrackDetailView: UIView {
     
     @objc private func handlePan(gesture: UIPanGestureRecognizer) {
         switch gesture.state {
-        case .began:
-            print("began")
         case .changed:
             handlePanChange(gesture: gesture)
         case .ended:
             handlePanEnded(gesture: gesture)
+        case .began, .possible, .cancelled, .failed:
+            print("nil")
         @unknown default:
             print("unknown default")
         }
@@ -146,6 +151,8 @@ class TrackDetailView: UIView {
                     self.tabBarDelegate?.minimizeTrackDetailController()
                 }
             }
+        case .began, .possible, .cancelled, .failed:
+            print("nil")
         @unknown default:
             print("unknown default")
         }
