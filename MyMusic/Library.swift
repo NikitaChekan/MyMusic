@@ -71,7 +71,7 @@ struct Library: View {
                                 self.tabBarDelegate?.maximizeTrackDetailController(viewModel: self.track)
                             }))
                     }.onDelete(perform: delete)
-                }
+                }.listStyle(.inset)
             }
             .actionSheet(isPresented: $showingAlert, content: {
                 ActionSheet(title: Text("Are you sure want to delete this Track?"), buttons: [.destructive(Text("Delete"), action: {
