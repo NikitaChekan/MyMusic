@@ -28,8 +28,8 @@ struct Library: View {
                         } label: {
                             Image(systemName: "play.fill")
                                 .frame(width: geometry.size.width / 2 - 10, height: 50)
-                                .accentColor(Color.init(#colorLiteral(red: 0.9921568627, green: 0.1764705882, blue: 0.3333333333, alpha: 1)))
-                                .background(Color.init(#colorLiteral(red: 0.9531342387, green: 0.9490900636, blue: 0.9562709928, alpha: 1)))
+                                .accentColor(Color("pink"))
+                                .background(Color("gray"))
                                 .cornerRadius(10)
                         }
                         
@@ -38,8 +38,8 @@ struct Library: View {
                         } label: {
                             Image(systemName: "arrow.triangle.2.circlepath")
                                 .frame(width: geometry.size.width / 2 - 10, height: 50)
-                                .accentColor(Color.init(#colorLiteral(red: 0.9921568627, green: 0.1764705882, blue: 0.3333333333, alpha: 1)))
-                                .background(Color.init(#colorLiteral(red: 0.9531342387, green: 0.9490900636, blue: 0.9562709928, alpha: 1)))
+                                .accentColor(Color("pink"))
+                                .background(Color("gray"))
                                 .cornerRadius(10)
                         }
                     }
