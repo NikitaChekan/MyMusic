@@ -15,7 +15,7 @@ class NetworkService {
         let url = "https://itunes.apple.com/search"
         let parameters = [
             "term": "\(searchText)",
-            "limit": "10",
+            "limit": "50",
             "media": "music"
         ]
         

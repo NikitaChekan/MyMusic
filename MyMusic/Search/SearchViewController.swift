@@ -45,7 +45,7 @@ class SearchViewController: UIViewController, SearchDisplayLogic {
         
         setupSearchBar()
         setupTableView()
-        searchBar(searchController.searchBar, textDidChange: "morgenshtern") /// По умолчанию сразу плеер открывается
+//        searchBar(searchController.searchBar, textDidChange: "morgenshtern") /// По умолчанию сразу плеер открывается
     }
     
     override func viewWillAppear(_ animated: Bool) {
