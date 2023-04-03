@@ -17,7 +17,6 @@ class SearchViewController: UIViewController, SearchDisplayLogic {
     @IBOutlet var tableView: UITableView!
     
     var interactor: SearchBusinessLogic?
-    var router: (NSObjectProtocol & SearchRoutingLogic)?
     
     let searchController = UISearchController(searchResultsController: nil)
 
@@ -33,18 +32,11 @@ class SearchViewController: UIViewController, SearchDisplayLogic {
         let viewController        = self
         let interactor            = SearchInteractor()
         let presenter             = SearchPresenter()
-        let router                = SearchRouter()
         viewController.interactor = interactor
-        viewController.router     = router
         interactor.presenter      = presenter
         presenter.viewController  = viewController
-        router.viewController     = viewController
     }
-    
-    // MARK: Routing
-    
-    
-    
+
     // MARK: View lifecycle
     
     override func viewDidLoad() {
@@ -141,7 +133,7 @@ extension SearchViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         let label = UILabel()
-        label.text = "Please enter search term above..."
+        label.text = "Find artists, tracks and albums..."
         label.textAlignment = .center
         label.font = UIFont.systemFont(ofSize: 18, weight: .medium)
         

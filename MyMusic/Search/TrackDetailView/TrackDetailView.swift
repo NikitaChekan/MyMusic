@@ -59,6 +59,10 @@ class TrackDetailView: UIView {
         )
         
         setupGestures()
+        
+        let thumbImage = UIImage(named: "Knob")
+        currentTimeSlider.setThumbImage(thumbImage, for: .normal)
+        volumeSlider.setThumbImage(thumbImage, for: .normal)
     }
     
     // MARK: - Setup

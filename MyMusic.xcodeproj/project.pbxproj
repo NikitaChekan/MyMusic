@@ -27,7 +27,6 @@
 		DAFA9D1129CB11BA00324245 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAFA9D1029CB11BA00324245 /* NetworkService.swift */; };
 		DAFA9D3729CB18C400324245 /* SearchPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAFA9D3029CB18C400324245 /* SearchPresenter.swift */; };
 		DAFA9D3829CB18C400324245 /* SearchWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAFA9D3129CB18C400324245 /* SearchWorker.swift */; };
-		DAFA9D3929CB18C400324245 /* SearchRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAFA9D3229CB18C400324245 /* SearchRouter.swift */; };
 		DAFA9D3A29CB18C400324245 /* SearchModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAFA9D3329CB18C400324245 /* SearchModels.swift */; };
 		DAFA9D3B29CB18C400324245 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAFA9D3429CB18C400324245 /* SearchViewController.swift */; };
 		DAFA9D3C29CB18C400324245 /* SearchInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAFA9D3529CB18C400324245 /* SearchInteractor.swift */; };
@@ -57,7 +56,6 @@
 		DAFA9D1029CB11BA00324245 /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
 		DAFA9D3029CB18C400324245 /* SearchPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchPresenter.swift; sourceTree = "<group>"; };
 		DAFA9D3129CB18C400324245 /* SearchWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchWorker.swift; sourceTree = "<group>"; };
-		DAFA9D3229CB18C400324245 /* SearchRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchRouter.swift; sourceTree = "<group>"; };
 		DAFA9D3329CB18C400324245 /* SearchModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchModels.swift; sourceTree = "<group>"; };
 		DAFA9D3429CB18C400324245 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		DAFA9D3529CB18C400324245 /* SearchInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchInteractor.swift; sourceTree = "<group>"; };
@@ -177,7 +175,6 @@
 				DAFA9D3029CB18C400324245 /* SearchPresenter.swift */,
 				DAFA9D3329CB18C400324245 /* SearchModels.swift */,
 				DAFA9D3129CB18C400324245 /* SearchWorker.swift */,
-				DAFA9D3229CB18C400324245 /* SearchRouter.swift */,
 			);
 			path = Search;
 			sourceTree = "<group>";
@@ -305,7 +302,6 @@
 				DA50D82E29C8E69700A4C6DE /* MainTabBarController.swift in Sources */,
 				DAFA9D3829CB18C400324245 /* SearchWorker.swift in Sources */,
 				DAFA9D3B29CB18C400324245 /* SearchViewController.swift in Sources */,
-				DAFA9D3929CB18C400324245 /* SearchRouter.swift in Sources */,
 				DAFA9D3A29CB18C400324245 /* SearchModels.swift in Sources */,
 				DAF0719D29D437EF0093CD21 /* CMTime + Extention.swift in Sources */,
 				DA50D81C29C8E61D00A4C6DE /* SceneDelegate.swift in Sources */,
