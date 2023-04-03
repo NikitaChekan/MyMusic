@@ -116,19 +116,44 @@
 		DA50D81829C8E61D00A4C6DE /* MyMusic */ = {
 			isa = PBXGroup;
 			children = (
-				DA50D81929C8E61D00A4C6DE /* AppDelegate.swift */,
-				DA50D81B29C8E61D00A4C6DE /* SceneDelegate.swift */,
+				DA74CC8129DAF3F800903175 /* App */,
+				DA065A3529CB6A2200005833 /* Models */,
 				DAFA9D2129CB182800324245 /* Services */,
 				DA50D82D29C8E69700A4C6DE /* MainTabBarController.swift */,
 				DAD4B8A729D7025600EB3446 /* Library.swift */,
 				DAFA9D1229CB174C00324245 /* Search */,
 				DAFA9D4229CB254700324245 /* Helpers */,
-				DA50D81F29C8E61D00A4C6DE /* Main.storyboard */,
-				DA50D82229C8E61F00A4C6DE /* Assets.xcassets */,
-				DA50D82429C8E61F00A4C6DE /* LaunchScreen.storyboard */,
-				DA50D82729C8E61F00A4C6DE /* Info.plist */,
+				DA74CC8229DAF46300903175 /* Storyboards */,
+				DA74CC8329DAF47700903175 /* Resources */,
 			);
 			path = MyMusic;
+			sourceTree = "<group>";
+		};
+		DA74CC8129DAF3F800903175 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				DA50D81929C8E61D00A4C6DE /* AppDelegate.swift */,
+				DA50D81B29C8E61D00A4C6DE /* SceneDelegate.swift */,
+				DA50D82729C8E61F00A4C6DE /* Info.plist */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		DA74CC8229DAF46300903175 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				DA50D81F29C8E61D00A4C6DE /* Main.storyboard */,
+				DA50D82429C8E61F00A4C6DE /* LaunchScreen.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		DA74CC8329DAF47700903175 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				DA50D82229C8E61F00A4C6DE /* Assets.xcassets */,
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 		DACB1CD229CC4D710035E3AB /* TrackDetailView */ = {
@@ -160,7 +185,6 @@
 		DAFA9D2129CB182800324245 /* Services */ = {
 			isa = PBXGroup;
 			children = (
-				DA065A3529CB6A2200005833 /* Models */,
 				DAFA9D1029CB11BA00324245 /* NetworkService.swift */,
 			);
 			path = Services;
@@ -437,7 +461,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 9M963S5SV4;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = MyMusic/Info.plist;
+				INFOPLIST_FILE = MyMusic/App/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -469,7 +493,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 9M963S5SV4;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = MyMusic/Info.plist;
+				INFOPLIST_FILE = MyMusic/App/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
