@@ -189,7 +189,7 @@
                                         <constraint firstAttribute="width" secondItem="1VT-Em-Jx5" secondAttribute="height" multiplier="1:1" id="4yI-7X-0Ym"/>
                                     </constraints>
                                 </imageView>
-                                <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="1" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="bo9-nO-FdB">
+                                <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="bo9-nO-FdB">
                                     <rect key="frame" x="25" y="0.0" width="283" height="18"/>
                                     <connections>
                                         <action selector="handleVolumeSlider:" destination="EDj-eJ-3a9" eventType="valueChanged" id="Mud-rg-aZP"/>
