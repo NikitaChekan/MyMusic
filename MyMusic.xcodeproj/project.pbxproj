@@ -17,7 +17,7 @@
 		DA50D82E29C8E69700A4C6DE /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA50D82D29C8E69700A4C6DE /* MainTabBarController.swift */; };
 		DACB1CD429CC4D950035E3AB /* TrackDetailView.xib in Resources */ = {isa = PBXBuildFile; fileRef = DACB1CD329CC4D950035E3AB /* TrackDetailView.xib */; };
 		DACB1CD629CC4DA00035E3AB /* TrackDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DACB1CD529CC4DA00035E3AB /* TrackDetailView.swift */; };
-		DAD4B8A829D7025600EB3446 /* Library.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAD4B8A729D7025600EB3446 /* Library.swift */; };
+		DAD4B8A829D7025600EB3446 /* Favorites.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAD4B8A729D7025600EB3446 /* Favorites.swift */; };
 		DAD4B8AA29D7540200EB3446 /* UserDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAD4B8A929D7540200EB3446 /* UserDefaults.swift */; };
 		DAD4B8AD29D75FA100EB3446 /* URLImage in Frameworks */ = {isa = PBXBuildFile; productRef = DAD4B8AC29D75FA100EB3446 /* URLImage */; };
 		DAF0719D29D437EF0093CD21 /* CMTime + Extention.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAF0719C29D437EF0093CD21 /* CMTime + Extention.swift */; };
@@ -48,7 +48,7 @@
 		DA50D82D29C8E69700A4C6DE /* MainTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
 		DACB1CD329CC4D950035E3AB /* TrackDetailView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TrackDetailView.xib; sourceTree = "<group>"; };
 		DACB1CD529CC4DA00035E3AB /* TrackDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackDetailView.swift; sourceTree = "<group>"; };
-		DAD4B8A729D7025600EB3446 /* Library.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Library.swift; sourceTree = "<group>"; };
+		DAD4B8A729D7025600EB3446 /* Favorites.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Favorites.swift; sourceTree = "<group>"; };
 		DAD4B8A929D7540200EB3446 /* UserDefaults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaults.swift; sourceTree = "<group>"; };
 		DAF0719C29D437EF0093CD21 /* CMTime + Extention.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CMTime + Extention.swift"; sourceTree = "<group>"; };
 		DAF0719E29D46C540093CD21 /* Nib.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Nib.swift; sourceTree = "<group>"; };
@@ -118,7 +118,7 @@
 				DA065A3529CB6A2200005833 /* Models */,
 				DAFA9D2129CB182800324245 /* Services */,
 				DA50D82D29C8E69700A4C6DE /* MainTabBarController.swift */,
-				DAD4B8A729D7025600EB3446 /* Library.swift */,
+				DAD4B8A729D7025600EB3446 /* Favorites.swift */,
 				DAFA9D1229CB174C00324245 /* Search */,
 				DAFA9D4229CB254700324245 /* Helpers */,
 				DA74CC8229DAF46300903175 /* Storyboards */,
@@ -306,7 +306,7 @@
 				DAF0719D29D437EF0093CD21 /* CMTime + Extention.swift in Sources */,
 				DA50D81C29C8E61D00A4C6DE /* SceneDelegate.swift in Sources */,
 				DAFA9D3729CB18C400324245 /* SearchPresenter.swift in Sources */,
-				DAD4B8A829D7025600EB3446 /* Library.swift in Sources */,
+				DAD4B8A829D7025600EB3446 /* Favorites.swift in Sources */,
 				DACB1CD629CC4DA00035E3AB /* TrackDetailView.swift in Sources */,
 				DAFA9D1129CB11BA00324245 /* NetworkService.swift in Sources */,
 			);

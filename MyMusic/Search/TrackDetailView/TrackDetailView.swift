@@ -58,6 +58,9 @@ class TrackDetailView: UIView {
             right: 11
         )
         
+//        miniPlayPauseButton.configuration?.imagePadding = 30
+//        miniPlayPauseButton.configuration?.contentInsets = NSDirectionalEdgeInsets(top: 11, leading: 11, bottom: 11, trailing: 11)
+        
         setupGestures()
         
         let thumbImage = UIImage(named: "Knob")

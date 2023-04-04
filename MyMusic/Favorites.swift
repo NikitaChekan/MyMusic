@@ -1,5 +1,5 @@
 //
-//  Library.swift
+//  Favorites.swift
 //  MyMusic
 //
 //  Created by jopootrivatel on 31.03.2023.
@@ -8,7 +8,7 @@
 import SwiftUI
 import URLImage
 
-struct Library: View {
+struct Favorites: View {
     
     @State var tracks = UserDefaults.standard.savedTracks()
     @State private var showingAlert = false
@@ -51,7 +51,7 @@ struct Library: View {
                 
                 List {
                     ForEach(tracks) { track in
-                        LibraryCell(cell: track)
+                        FavoritesCell(cell: track)
                             .gesture(LongPressGesture().onEnded { _ in
                                 self.track = track
                                 self.showingAlert  = true
@@ -78,7 +78,7 @@ struct Library: View {
                     self.delete(track: self.track)
                 }), .cancel()])
             })
-            .navigationBarTitle("Library")
+            .navigationBarTitle("Favorites")
         }
     }
     
@@ -104,7 +104,7 @@ struct Library: View {
     
 }
 
-struct LibraryCell: View {
+struct FavoritesCell: View {
     
     var cell: SearchViewModel.Cell
     
@@ -125,13 +125,13 @@ struct LibraryCell: View {
     }
 }
 
-struct Library_Previews: PreviewProvider {
+struct Favorites_Previews: PreviewProvider {
     static var previews: some View {
-        Library()
+        Favorites()
     }
 }
 
-extension Library: TrackMovingDelegate {
+extension Favorites: TrackMovingDelegate {
     
     func moveBackForPreviousTrack() -> SearchViewModel.Cell? {
         let index = tracks.firstIndex(of: track)
