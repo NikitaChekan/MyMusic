@@ -64,6 +64,8 @@ class SearchViewController: UIViewController, SearchDisplayLogic {
     }
     
     private func setupSearchBar() {
+        searchController.searchBar.tintColor = #colorLiteral(red: 1, green: 0, blue: 0.3764705882, alpha: 1)
+        
         navigationItem.searchController = searchController
         navigationItem.hidesSearchBarWhenScrolling = false
         searchController.obscuresBackgroundDuringPresentation = false
