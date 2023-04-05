@@ -32,18 +32,12 @@ class NetworkService {
             let decoder = JSONDecoder()
             do {
                 let objects = try decoder.decode(SearchResponse.self, from: data)
-                print("objects:", objects)
+//                print("objects:", objects) Увидеть подгружаемые объекты в консоли
                 completion(objects)
-
-                
             } catch let jsonError {
-                print("Error", jsonError)
+                print("Error:", jsonError)
                 completion(nil)
             }
-            
-//            let someString = String(data: data, encoding: .utf8)
-//            print(someString ?? "")
         }
-        
     }
 }

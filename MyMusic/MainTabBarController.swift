@@ -5,19 +5,17 @@
 //  Created by jopootrivatel on 20.03.2023.
 //
 
-import UIKit
 import SwiftUI
 
 protocol MainTabBarControllerDelegate: AnyObject {
     func minimizeTrackDetailController()
-    func maximizeTrackDetailController(viewModel: SearchViewModel.Cell?)    
+    func maximizeTrackDetailController(viewModel: SearchViewModel.Cell?)
 }
 
 class MainTabBarController: UITabBarController {
     
     let searchVC: SearchViewController = SearchViewController.loadFromStoryboard()
     let trackDetailView: TrackDetailView = TrackDetailView.loadFromNib()
-
     
     private var minimizedTopAnchorConstraint: NSLayoutConstraint!
     private var maximizedTopAnchorConstraint: NSLayoutConstraint!
@@ -26,24 +24,7 @@ class MainTabBarController: UITabBarController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        view.backgroundColor = .white
-        tabBar.tintColor = #colorLiteral(red: 1, green: 0, blue: 0.3764705882, alpha: 1)
-        
-        var favorites = Favorites()
-        favorites.tabBarDelegate = self
-        let hostVC = UIHostingController(rootView: favorites)
-        hostVC.tabBarItem.image = UIImage(systemName: "heart")
-        hostVC.tabBarItem.title = "Favorites"
-        
-        viewControllers = [
-            hostVC,
-            generateViewController(
-                rootViewController: searchVC,
-                image: UIImage(imageLiteralResourceName: "search"),
-                title: "Search"
-            )
-        ]
-        
+        setupTabBar()
         setupTrackDetailView()
         
         searchVC.tabBarDelegate = self
@@ -60,6 +41,25 @@ class MainTabBarController: UITabBarController {
         return navigationVC
     }
     
+    private func setupTabBar() {
+        tabBar.tintColor = #colorLiteral(red: 1, green: 0, blue: 0.3764705882, alpha: 1)
+        
+        var favorites = Favorites()
+        favorites.tabBarDelegate = self
+        let hostVC = UIHostingController(rootView: favorites)
+        hostVC.tabBarItem.image = UIImage(systemName: "heart")
+        hostVC.tabBarItem.title = "Favorites"
+        
+        viewControllers = [
+            generateViewController(
+                rootViewController: searchVC,
+                image: UIImage(imageLiteralResourceName: "search"),
+                title: "Search"
+            ),
+            hostVC
+        ]
+    }
+    
     private func setupTrackDetailView() {
         
         trackDetailView.translatesAutoresizingMaskIntoConstraints = false
@@ -67,10 +67,10 @@ class MainTabBarController: UITabBarController {
         trackDetailView.delegate = searchVC
         
         view.insertSubview(trackDetailView, belowSubview: tabBar)
-                
+        
         maximizedTopAnchorConstraint = trackDetailView.topAnchor.constraint(equalTo: view.topAnchor, constant: view.frame.height)
         minimizedTopAnchorConstraint = trackDetailView.topAnchor.constraint(equalTo: tabBar.topAnchor, constant: -64)
-    
+        
         bottomAnchorConstraint = trackDetailView.bottomAnchor.constraint(
             equalTo: view.bottomAnchor,
             constant: view.frame.height

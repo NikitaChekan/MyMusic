@@ -1,9 +1,9 @@
 //
 //  SearchWorker.swift
-//  MyMusic
+//  IMusic
 //
-//  Created by jopootrivatel on 22.03.2023.
-//  Copyright (c) 2023 ___ORGANIZATIONNAME___. All rights reserved.
+//  Created by Алексей Пархоменко on 12/08/2019.
+//  Copyright (c) 2019 Алексей Пархоменко. All rights reserved.
 //
 
 import UIKit

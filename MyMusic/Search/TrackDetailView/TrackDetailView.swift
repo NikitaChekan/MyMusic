@@ -16,7 +16,7 @@ protocol TrackMovingDelegate {
 
 class TrackDetailView: UIView {
     
-    // MARK: - @@IBOutlets
+    // MARK: - @IBOutlets
     @IBOutlet var trackImageView: UIImageView!
     @IBOutlet var currentTimeSlider: UISlider!
     @IBOutlet var currentTimeLabel: UILabel!
@@ -47,25 +47,8 @@ class TrackDetailView: UIView {
     override func awakeFromNib() {
         super.awakeFromNib()
         
-        let scale: CGFloat = 0.8
-        trackImageView.transform = CGAffineTransform(scaleX: scale, y: scale)
-        trackImageView.layer.cornerRadius = 10
-        
-        miniPlayPauseButton.imageEdgeInsets = .init(
-            top: 11,
-            left: 11,
-            bottom: 11,
-            right: 11
-        )
-        
-//        miniPlayPauseButton.configuration?.imagePadding = 30
-//        miniPlayPauseButton.configuration?.contentInsets = NSDirectionalEdgeInsets(top: 11, leading: 11, bottom: 11, trailing: 11)
-        
         setupGestures()
-        
-        let thumbImage = UIImage(named: "Knob")
-        currentTimeSlider.setThumbImage(thumbImage, for: .normal)
-        volumeSlider.setThumbImage(thumbImage, for: .normal)
+        setupTheAppearance()
     }
     
     // MARK: - Setup
@@ -96,11 +79,27 @@ class TrackDetailView: UIView {
     }
     
     private func playTrack(previewUrl: String?) {
-        
         guard let url = URL(string: previewUrl ?? "") else { return }
         let playerItem = AVPlayerItem(url: url)
         player.replaceCurrentItem(with: playerItem)
         player.play()
+    }
+    
+    private func setupTheAppearance() {
+        let scale: CGFloat = 0.8
+        trackImageView.transform = CGAffineTransform(scaleX: scale, y: scale)
+        trackImageView.layer.cornerRadius = 10
+        
+        miniPlayPauseButton.imageEdgeInsets = .init(
+            top: 11,
+            left: 11,
+            bottom: 11,
+            right: 11
+        )
+        
+        let thumbImage = UIImage(named: "Knob")
+        currentTimeSlider.setThumbImage(thumbImage, for: .normal)
+        volumeSlider.setThumbImage(thumbImage, for: .normal)
     }
     
     // MARK: - Maximizing and minimizing gestures
@@ -225,10 +224,7 @@ class TrackDetailView: UIView {
     }
     
     @IBAction func dragDownButtonTapped(_ sender: Any) {
-        
         self.tabBarDelegate?.minimizeTrackDetailController()
-        
-        //        self.removeFromSuperview()
     }
     
     @IBAction func previousTrack(_ sender: Any) {

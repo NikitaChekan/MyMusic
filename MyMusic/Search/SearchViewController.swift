@@ -45,6 +45,7 @@ class SearchViewController: UIViewController, SearchDisplayLogic {
         
         setupSearchBar()
         setupTableView()
+        
 //        searchBar(searchController.searchBar, textDidChange: "morgenshtern") /// По умолчанию сразу плеер открывается
     }
     
@@ -83,7 +84,7 @@ class SearchViewController: UIViewController, SearchDisplayLogic {
     func displayData(viewModel: Search.Model.ViewModel.ViewModelData) {
         switch viewModel {
         case .displayTracks(let searchViewModel):
-            print("viewController .displayTracks")
+//            print("viewController .displayTracks")
             
             self.searchViewModel = searchViewModel
             tableView.reloadData()
@@ -113,20 +114,7 @@ extension SearchViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let cellViewModel = searchViewModel.cells[indexPath.row]
-        
         self.tabBarDelegate?.maximizeTrackDetailController(viewModel: cellViewModel)
-        
-//        let window = UIApplication.shared.connectedScenes
-//        .filter({$0.activationState == .foregroundActive})
-//        .map({$0 as? UIWindowScene})
-//        .compactMap({$0})
-//        .first?.windows
-//        .filter({$0.isKeyWindow}).first
-//        let trackDetailsView: TrackDetailView = TrackDetailView.loadFromNib()
-//        trackDetailsView.set(viewModel: cellViewModel)
-//        trackDetailsView.delegate = self
-//        window?.addSubview(trackDetailsView)
-
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
@@ -152,8 +140,6 @@ extension SearchViewController: UITableViewDelegate, UITableViewDataSource {
 extension SearchViewController: UISearchBarDelegate {
     
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
-        print(searchText)
-        
         timer?.invalidate()
         timer = Timer.scheduledTimer(withTimeInterval: 0.5, repeats: false, block: { (_) in
             self.interactor?.makeRequest(request: Search.Model.Request.RequestType.getTracks(searchTerm: searchText))
