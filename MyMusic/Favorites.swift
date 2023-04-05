@@ -22,7 +22,6 @@ struct Favorites: View {
                 GeometryReader { geometry in
                     HStack(spacing: 20) {
                         Button {
-                            print("WTF")
                             self.track = self.tracks[0]
                             self.tabBarDelegate?.maximizeTrackDetailController(viewModel: self.track)
                         } label: {
@@ -49,7 +48,7 @@ struct Favorites: View {
                     .padding(.leading)
                     .padding(.trailing)
                 
-                List {
+                List() {
                     ForEach(tracks) { track in
                         FavoritesCell(cell: track)
                             .gesture(LongPressGesture().onEnded { _ in
@@ -72,8 +71,7 @@ struct Favorites: View {
                             }))
                     }.onDelete(perform: delete)
                 }.listStyle(.inset)
-            }
-            .actionSheet(isPresented: $showingAlert, content: {
+            }.actionSheet(isPresented: $showingAlert, content: {
                 ActionSheet(title: Text("Are you sure want to delete this Track?"), buttons: [.destructive(Text("Delete"), action: {
                     self.delete(track: self.track)
                 }), .cancel()])
@@ -84,18 +82,18 @@ struct Favorites: View {
     
     func delete(at offsets: IndexSet) {
         tracks.remove(atOffsets: offsets)
-        
+
         if let saveData = try? NSKeyedArchiver.archivedData(withRootObject: tracks, requiringSecureCoding: false) {
             let defaults = UserDefaults.standard
             defaults.set(saveData, forKey: UserDefaults.favouriteTrackKey)
         }
     }
-    
+
     func delete(track: SearchViewModel.Cell) {
         let index = tracks.firstIndex(of: track)
         guard let myIndex = index else { return }
         tracks.remove(at: myIndex)
-        
+
         if let saveData = try? NSKeyedArchiver.archivedData(withRootObject: tracks, requiringSecureCoding: false) {
             let defaults = UserDefaults.standard
             defaults.set(saveData, forKey: UserDefaults.favouriteTrackKey)
